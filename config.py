@@ -19,6 +19,8 @@ class Cfg():
     file_name: str
     logging_level: int = field(init=False)
     sql_text: str
+    last_row_sql_text: str
+    date_time_field: str
 
     def __post_init__(self):
         self.logging_level = DEBUG if self.debug else INFO
